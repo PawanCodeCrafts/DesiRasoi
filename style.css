@@ -1,0 +1,578 @@
+/* common styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+:root {
+    --orange-primary: #fc5400;
+    --black: #000000;
+    --white: #ffffff;
+    --grey: #424242;
+}
+
+html {
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: #fffefe;
+    margin: 0px 5px;
+}
+
+
+
+/* common heading style */
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.heading h3 {
+    font-size: 3.2rem;
+    margin: 0 auto;
+    color: var(--black);
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+    position: relative;
+    display: inline-block;
+}
+
+.heading h3 span {
+    color: var(--orange-primary);
+}
+
+.heading h3::after {
+    content: "";
+    background-color: var(--orange-primary);
+    width: 50%;
+    height: 4px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+
+
+
+
+
+
+
+
+/*------------------------------------- home styling starts ----------------------------------------*/
+
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background: rgba(56, 56, 56, 0.3);
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    padding: 1px 30px;
+}
+
+nav img {
+    width: 85px;
+    height: auto;
+    border: 3px solid var(--orange-primary);
+    border-radius: 100px;
+    margin-left: 20px;
+}
+
+nav img:hover {
+    border: 4px solid var(--orange-primary);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white);
+    transition: 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--orange-primary);
+    text-decoration: underline;
+}
+
+.cart-btn {
+    margin-right: 50px;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--white);
+    border: 2px solid var(--orange-primary);
+    background-color: var(--orange-primary);
+    border-radius: 80px;
+    transition: 0.2s ease-out;
+}
+
+.cart-btn i {
+    padding: 0em 0.5em;
+}
+
+.cart-btn:hover {
+    color: var(--orange-primary);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+}
+
+.home-content h2 {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 3.5em;
+    letter-spacing: 3px;
+    padding: 10px 0px;
+    color: var(--white)
+}
+
+.home-content h1:hover {
+    text-shadow: 4px 4px 10px rgba(249, 71, 1, 0.661);
+}
+
+.home-content p {
+    font-size: 0.8rem;
+    margin: auto 30px
+}
+
+.home-content div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content-btn {
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    border: 2px solid var(--orange-primary);
+    background-color: var(--orange-primary);
+    border-radius: 50px;
+    margin: 20px auto;
+}
+
+.home-content-btn:hover {
+    color: var(--orange-primary);
+    border: 2px solid var(--orange-primary);
+    background-color: transparent;
+}
+
+/* hamburger menu css */
+
+/*------------------------------------- home styling ends ----------------------------------------*/
+
+
+
+
+
+
+
+/* media query for home section */
+/* @media only screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        background: rgb(0, 0, 0);
+        z-index: 2;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 1.3rem;
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .cart-btn {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+
+    .home-content {
+        padding: 0 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .home-content h2 {
+        font-size: 2em;
+    }
+
+    .home-content h1 {
+        font-size: 2.5em;
+    }
+
+    .home-content-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+} */
+
+
+
+
+
+
+
+
+/*---------------------------------------About section css----------------------------------------- */
+
+
+#about {
+    margin: 50px;
+}
+
+.about-content {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.about-content img {
+    width: 46%;
+    height: 550px;
+    object-fit: cover;
+    padding: 25px 30px;
+    border-radius: 100%;
+}
+
+.about-info {
+    height: 400px;
+    width: 50%;
+    padding-right: 50px;
+}
+
+.about-info h5 {
+    padding: 0px 0px 30px 30px;
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.about-info p {
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: var(--grey);
+}
+
+.about-content2 {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.about-content2 .left-side {
+    width: 50%;
+    height: auto;
+}
+
+.about-content2 .left-side h2 {
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-bottom: 30px;
+}
+
+.left-side h2 span {
+    color: var(--orange-primary);
+}
+
+.about-content2 .left-side p {
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: var(--grey);
+}
+
+.about-content2 .right-side {
+    width: 50%;
+    height: auto;
+}
+
+.right-side .wrap {
+    padding: 40px;
+    margin-left: 30px;
+    border: 2px solid var(--orange-primary);
+    border-radius: 20px;
+    height: 400px;
+    width: 90%;
+    background-color: var(--orange-primary);
+}
+
+.right-side .wrap p {
+    padding: 15px 0px;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+.right-side .wrap span {
+    font-size: 12px;
+    font-weight: 700;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 2px;
+    margin-right: 10px;
+    background-color: black;
+    color: var(--orange-primary);
+}
+
+/*------------------------------------- about section ends ----------------------------------------*/
+
+
+
+
+
+
+/*------------------------------------- menu section starts ----------------------------------------*/
+
+#menu {
+    margin: 10px;
+    width: 100%;
+    padding: 20px;
+}
+
+.all-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+    gap: 60px;
+}
+
+.card-container {
+    margin: 10px 0px;
+    border: 2px solid #c4c4c4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    height: 380px;
+    transition: 0.2s ease-in-out;
+}
+
+.card-container:hover {
+    scale: 1.1;
+}
+
+.card-container img {
+    width: 260px;
+    height: 200px;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.food-info {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.food-info .food-name {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.food-info .food-price {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.food-info .food-price span {
+    color: #047c02;
+    font-weight: 700;
+}
+
+.food-price strike {
+    font-size: 15px;
+    color: #ff0000;
+    padding-left: 10px;
+}
+
+.food-info .food-btn {
+    text-decoration: none;
+    padding: 10px 60px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    border: 1px solid var(--orange-primary);
+    background-color: var(--orange-primary);
+    border-radius: 10px;
+}
+
+.food-info .food-btn:hover {
+    background-color: #fd8041f9;
+}
+
+/* -------------------------------------menu section ends-------------------------------------------------------- */
+
+
+
+/* -------------------------------------Contact section starts-------------------------------------------------------- */
+
+
+#contactus {
+    min-height: 100vh;
+    padding: 20px 6%;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contact-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 2px solid var(--orange-primary);
+    border-radius: 5px;
+    background: #0c0c0c;
+    color: var(--orange-primary);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+.contact-form button {
+    background: var(--orange-primary);
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ff8800;
+}
+
+.contact-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 165, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------Contact section ends-------------------------------------------------------- */
