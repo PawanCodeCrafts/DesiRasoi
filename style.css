@@ -498,26 +498,24 @@ nav ul li a:hover {
 #contactus {
     min-height: 100vh;
     padding: 20px 6%;
+    background-color: #ff8c0005;
+    z-index: -1;
 }
 
 .contact-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
+    padding: 0px 50px;
+    width: 100%;
+    z-index: 2;
 }
 
 .contact-form {
     flex: 1;
-    min-width: 250px;
-}
-
-.contact-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width: 200px;
 }
 
 .contact-form form {
@@ -528,13 +526,15 @@ nav ul li a:hover {
 
 .contact-form input,
 .contact-form textarea {
+    width: 89%;
     padding: 12px;
-    border: 2px solid var(--orange-primary);
+    border: 3px solid var(--orange-primary);
     border-radius: 5px;
-    background: #0c0c0c;
+    background: white;
     color: var(--orange-primary);
     font-size: 1.2rem;
     font-weight: 500;
+    box-shadow: 4px 2px 4px rgba(255, 68, 0, 0.5);
 }
 
 .contact-form input::placeholder,
@@ -543,6 +543,7 @@ nav ul li a:hover {
 }
 
 .contact-form button {
+    width: 89%;
     background: var(--orange-primary);
     color: black;
     font-weight: bold;
@@ -558,21 +559,128 @@ nav ul li a:hover {
     background: #ff8800;
 }
 
-.contact-image img {
+/* === Image + Background Shape === */
+.contact-image {
+    position: relative;
+    flex: 1;
     max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(255, 165, 0, 0.5);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image img {
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 
+.contact-image::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(135deg, rgba(255, 68, 0, 0.5), rgba(255, 140, 0, 0.3));
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: 0;
+}
+
+/* -------------------------------------Contact section ends--------------------------------------------------- */
 
 
+/* -------------------------------------footer section starts--------------------------------------------------- */
+
+.footer {
+
+    background-color: #ff4400d1;
+    color: white;
+    margin-top: 50px;
+    padding: 30px 45px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.footer-about {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-about h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-contact {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  margin-bottom: 15px;
+  font-size: 30px;
+  color: #fff5e6;
+}
+.footer-contact p{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.footer-links li {
+  margin-bottom: 20px;
+font-size: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+
+}
+
+.footer-links a:hover {
+  color: #222;
+}
+.footer-socials a {
+  margin-right: 25px;
+  font-size: 30px;
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #222;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+}
 
 
-
-
-
-
-
-
-/* -------------------------------------Contact section ends-------------------------------------------------------- */
+/* -------------------------------------footer section ends--------------------------------------------------- */
