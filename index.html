@@ -253,13 +253,16 @@
         <div class="contact-container">
 
             <div class="contact-form" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="tel" pattern="[0-9]{10}" placeholder="Your Mobile number">
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                <form id="form">
+                    <input id="name" type="text" placeholder="Your Name" required>
+                    <input id="email" type="email" placeholder="Your Email" required>
+                    <input id="phone" type="tel" pattern="[0-9]{10}" placeholder="Your Mobile number">
+                    <textarea id="msg" placeholder="Your Message" rows="5"></textarea>
                     <button type="submit">Send Message</button>
+                    <p id="popup" style=" color: green; font-size: 18px; font-weight: bold; font-family: cursive;">
+                    </p>
                 </form>
+
             </div>
 
             <div class="contact-image" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
@@ -328,6 +331,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

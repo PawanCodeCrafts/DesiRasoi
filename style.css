@@ -159,7 +159,7 @@ nav ul li a:hover {
 .home-content {
     position: absolute;
     top: 35%;
-    left: 35%;
+    left: 33%;
     color: var(--white);
 }
 
@@ -184,9 +184,12 @@ nav ul li a:hover {
     font-size: 1.5rem;
     font-style: italic;
     background-color: #000000;
+    border-radius: 10px;
     color: var(--orange-primary);
     margin: 15px auto;
     text-align: center;
+    font-weight: bold;
+    text-shadow: 4px 5px 10px #ff4a03b5;
 }
 
 .home-content div {
@@ -490,6 +493,7 @@ nav ul li a:hover {
     font-weight: 500;
     box-shadow: 4px 2px 4px rgba(255, 68, 0, 0.5);
 }
+
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
