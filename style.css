@@ -221,8 +221,6 @@ nav ul li a:hover {
 
 
 
-
-
 /*---------------------------------------About section css----------------------------------------- */
 
 
@@ -369,6 +367,40 @@ nav ul li a:hover {
     width: 100%;
     padding: 20px;
 }
+
+/* --------------------scrolling text-------------------- */
+.scrolling-text {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background: #ffe1b0;
+    border: 2px solid orangered;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkred;
+    padding: 10px;
+}
+
+.scrolling-text span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* -------------------scrolling text ends------------------------------------------- */
+
 
 .all-cards {
     display: flex;
@@ -549,6 +581,22 @@ nav ul li a:hover {
     z-index: 0;
 }
 
+.popup {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.popup.show {
+    opacity: 1;
+}
+
+.highlight-name {
+    font-size: 25px;
+    color: orangered;
+    text-transform: capitalize;
+    font-family: cursive;
+}
+
 /* -------------------------------------Contact section ends--------------------------------------------------- */
 
 
@@ -558,7 +606,7 @@ nav ul li a:hover {
 
     background-color: #ff4400d1;
     color: white;
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 30px 45px;
 }
 
