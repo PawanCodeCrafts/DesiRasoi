@@ -17,14 +17,14 @@ form.addEventListener('submit', (e) => {
         return;
     }
 
-    //  message after form submission
+    // add message after form submission
     popup.innerHTML = `Thank you for contacting us,<span class="highlight-name"> ${myname}</span> ! We will get back to you shortly.`;
 
     // add popup + fade in
     popup.classList.add('popup');
     setTimeout(() => {
         popup.classList.add('show')
-    }, 5);
+    }, 1000);
 
     // clear form after submit
     form.reset();
