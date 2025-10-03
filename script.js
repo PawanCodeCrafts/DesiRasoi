@@ -20,11 +20,20 @@ form.addEventListener('submit', (e) => {
     // add message after form submission
     popup.innerHTML = `Thank you for contacting us,<span class="highlight-name"> ${myname}</span> ! We will get back to you shortly.`;
 
-    // add popup + fade in
+    // popup visible 
     popup.classList.add('popup');
+
+    // fade-in 
     setTimeout(() => {
-        popup.classList.add('show')
-    }, 1000);
+        popup.classList.add('show');
+    }, 50);
+
+    // fade-out after 5s
+    setTimeout(() => {
+        popup.classList.remove('show');
+    }, 5000);
+
+
 
     // clear form after submit
     form.reset();
